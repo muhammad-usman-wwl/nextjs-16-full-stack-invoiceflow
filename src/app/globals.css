@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Print rules: the invoice print page must come out as a clean sheet of
+   paper — no app navigation, no grey page background. */
+@media print {
+  .app-nav {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+  }
+  main {
+    padding: 0 !important;
+    max-width: none !important;
+  }
+  .print-hidden {
+    display: none !important;
+  }
+  .print-sheet {
+    box-shadow: none !important;
+    ring: none !important;
+    border: none !important;
+  }
+}
